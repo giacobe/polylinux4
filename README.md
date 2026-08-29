@@ -11,6 +11,10 @@ It contains:
 - launch pages and participant Markdown for every currently published lab;
 - a repeatable public-site synchronization script.
 
+See [`RECREATE-SITE.md`](RECREATE-SITE.md) for the complete reconstruction,
+server-configuration, VM-artifact placement, dependency, validation, and
+deployment workflow.
+
 ## Published lab pages
 
 The current public site has individual launch pages for Labs 1, 2, 3, 5, 6,
