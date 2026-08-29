@@ -1,86 +1,57 @@
-# PolyLinux 4
+# PolyLinux browser site
 
-PolyLinux 4 is a browser-based Linux lab interface built around a shared HTML template, lab-specific Markdown instructions, and a v86-backed Linux VM.
+This repository captures the browser-delivered PolyLinux catalog and lab pages
+published at <https://polylab.ist.psu.edu/polylinux/>.
 
-## Repository structure
+It contains:
 
-```text
-.
-├── index.html                  # Root launcher for Lab 1
-├── lab-template.html           # Shared UI template for all labs
-├── css/
-│   └── polylinux-vm.css        # Full layout, timeline, VM, and form styling
-├── js/
-│   ├── lab-loader.js           # Loads the shared template and injects lab config
-│   ├── instructions.js         # Loads Markdown, parses front matter, builds timeline cards
-│   ├── terminal.js             # Browser serial terminal support
-│   ├── ui.js                   # Theme/reset/status helpers
-│   └── vm-init.js              # Starts the v86 VM
-├── lib/
-│   ├── libv86.js               # Add from your v86 build/deployment
-│   └── v86.wasm                # Add from your v86 build/deployment
-├── bios/
-│   ├── seabios.bin             # Add from your v86 build/deployment
-│   └── vgabios.bin             # Add from your v86 build/deployment
-└── lab1/
-    ├── index.html              # Lab 1 launcher
-    ├── lab1.html               # Compatibility alias for Lab 1 launcher
-    ├── fs-navigation.md        # Lab 1 instructions and metadata
-    ├── bzImage                 # Add Lab 1 kernel image
-    └── rootfs.cpio.gz          # Add Lab 1 initrd/rootfs
-```
+- the 14-lab catalog;
+- the shared page template, CSS, JavaScript, v86 runtime, WebAssembly module,
+  and BIOS files;
+- launch pages and participant Markdown for every currently published lab;
+- a repeatable public-site synchronization script.
 
-## Markdown lab format
+## Published lab pages
 
-Each lab Markdown file starts with simple front matter:
+The current public site has individual launch pages for Labs 1, 2, 3, 5, 6,
+7, 8, 10, 13, and 14. Labs 4, 9, 11, and 12 are catalog entries marked as
+planned and do not yet have individual public pages.
 
-```yaml
----
-title: "PolyLinux File System Navigation"
-short_title: "FS-Navigation"
-panel_title: "Learning Path"
-form_url: "https://forms.office.com/..."
----
-```
+Each published lab directory contains an `index.html` configuration that links
+the shared template to:
 
-Timeline cards are created from level-2 Markdown headings:
+- a participant-facing Markdown instruction file;
+- a lab-specific `bzImage` kernel;
+- a lab-specific `*.cpio.gz` initrd;
+- an answer form referenced by the Markdown when one is published.
 
-```md
-## START: Welcome to PolyLinux!
-## LOGIN: Get On the Machine
-## 1: Level Basic1
-## REF: Quick Reference
-```
+Lab 7 currently has no answer-form link in its published Markdown. This mirror
+preserves that live state rather than inventing a form URL.
 
-The text before the colon becomes the timeline marker. The text after the colon becomes the card title.
+## VM image policy
 
-## Adding another lab
-
-Create a new folder such as `lab2/`, copy `lab1/index.html`, and update only the lab-specific values:
-
-```html
-<script>
-  window.POLYLINUX_LAB = {
-    title: "PolyLinux Lab 2",
-    template: "../lab-template.html",
-    assetBase: "../",
-    md: "./fs-navigation.md",
-    bzimage: "./bzImage",
-    initrd: "./rootfs.cpio.gz"
-  };
-</script>
-<script src="../js/lab-loader.js" defer></script>
-```
-
-## Runtime assets
-
-This zip includes the complete source structure. It does not fabricate the VM runtime binaries. Add your existing v86 and lab image files to these paths:
+Lab-specific kernels and initrds are deliberately excluded from this repository:
 
 ```text
-lib/libv86.js
-lib/v86.wasm
-bios/seabios.bin
-bios/vgabios.bin
-lab1/bzImage
-lab1/rootfs.cpio.gz
+**/*bzImage
+**/*.cpio.gz
 ```
+
+Their paths remain in the launch-page configuration so the institutionally
+managed files can be uploaded manually. The smaller shared v86 runtime,
+WebAssembly, and BIOS dependencies are included.
+
+## Refreshing the public snapshot
+
+From PowerShell:
+
+```powershell
+& .\scripts\sync-live-polylinux.ps1
+```
+
+The script downloads public HTML, Markdown, CSS, JavaScript, and shared runtime
+dependencies. It refuses to download lab kernels or initrds and writes capture
+details to `LIVE-SNAPSHOT.md`.
+
+After refreshing, review the diff, verify every instruction/form link, and
+commit only after confirming no VM image was added.

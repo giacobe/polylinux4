@@ -1,22 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PolyLinux Lab 1</title>
-  <script>
-    window.POLYLINUX_LAB = {
-      title: "PolyLinux Lab 1",
-      template: "./lab-template.html",
-      assetBase: "./",
-      md: "./lab1/fs-navigation.md",
-      bzimage: "./lab1/bzImage",
-      initrd: "./lab1/rootfs.cpio.gz"
-    };
-  </script>
-  <script src="./js/lab-loader.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PolyLinux Activities | Linux Command-Line Labs</title>
+  <link rel="stylesheet" href="./common.css" />
+  <link rel="stylesheet" href="polylinux.css" />
 </head>
 <body>
-  Loading PolyLinux...
+  <main class="page">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">&gt;_</div><div>PolyLinux Activities</div></div>
+      <div class="status">LINUX OPERATIONS · COMMAND-LINE MISSIONS</div>
+    </header>
+
+    <section class="hero" aria-labelledby="module-title">
+      <div class="briefing">
+        <div class="eyebrow">Operations Briefing</div>
+        <h1 id="module-title">Master the system one command at a time.</h1>
+        <p class="subtitle">Work inside a Linux environment used by cybersecurity analysts, administrators, and incident responders. Each activity develops practical command-line skills through guided missions, hidden objectives, and hands-on system exploration.</p>
+        <div class="briefing-status">
+          <span><strong>14</strong> planned activity sets</span>
+          <span><strong>10</strong> available now</span>
+          <span><strong>4</strong> in development</span>
+        </div>
+      </div>
+
+      <aside class="side-panel" aria-label="Linux terminal preview">
+        <div class="terminal-window">
+          <div class="terminal-bar"><div class="terminal-dots"><span></span><span></span><span></span></div><span>analyst@polylinux:~</span></div>
+          <div class="terminal-screen">
+            <p><span class="prompt">analyst@polylinux</span>:<span class="path">~</span>$ whoami</p>
+            <p class="output">junior_analyst</p>
+            <p><span class="prompt">analyst@polylinux</span>:<span class="path">~</span>$ pwd</p>
+            <p class="output">/home/analyst</p>
+            <p><span class="prompt">analyst@polylinux</span>:<span class="path">~</span>$ ls missions</p>
+            <p class="output"><span class="directory">lab1</span> <span class="directory">lab2</span> <span class="locked">future_labs</span></p>
+            <p><span class="prompt">analyst@polylinux</span>:<span class="path">~</span>$ select-mission <span class="cursor"></span></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="choose-lab">
+      <div class="section-head">
+        <div><div class="eyebrow">Select an Activity</div><h2 id="choose-lab">PolyLinux Lab Series</h2></div>
+        <p>Begin with the available foundational activities. Additional command-line, administration, and security labs will be added as they are completed.</p>
+      </div>
+
+      <div class="labs polylinux-labs">
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 01</div><span class="availability available-label">Available</span></div>
+          <h3>Basic File System Navigation</h3>
+          <p>Identify your user, determine your current location, list directory contents, move through the file system, and read text files.</p>
+	  <p>Lab Design by NG</p>
+          <div class="tag-list"><span class="tag">pwd</span><span class="tag">whoami</span><span class="tag">ls</span><span class="tag">cd</span><span class="tag">cat</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab1/index.html">Start Lab 1</a></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 02</div><span class="availability available-label">Available</span></div>
+          <h3>Text Manipulation and Search</h3>
+          <p>Transform, search, organize, and filter text while locating useful information across files and directories.</p>
+	  <p>Lab Design by JB</p>
+          <div class="tag-list"><span class="tag">tr</span><span class="tag">grep</span><span class="tag">uniq</span><span class="tag">sort</span><span class="tag">find</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab2/index.html">Start Lab 2</a></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 03</div><span class="availability planned-label">Available</span></div>
+          <h3>File System Navigation</h3>
+          <p>Work with absolute and relative paths, hidden files, directory trees, links, file metadata, and more complex navigation tasks.</p>
+	  <p>Lab Design by NG</p>
+          <div class="tag-list"><span class="tag">paths</span><span class="tag">tree</span><span class="tag">stat</span><span class="tag">links</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab3">Start Lab 3</a></div>
+        </article>
+
+        <article class="lab-card planned">
+          <div class="card-topline"><div class="lab-number">LAB 04</div><span class="availability planned-label">Planned</span></div>
+          <h3>Users, Groups, and Permissions</h3>
+          <p>Examine Linux identities, group membership, ownership, permission bits, and the controls that protect system resources.</p>
+	  <p>Lab Design by BA</p>
+          <div class="tag-list"><span class="tag">id</span><span class="tag">groups</span><span class="tag">chmod</span><span class="tag">chown</span></div>
+          <div class="actions"><span class="btn btn-disabled">Coming Soon</span></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 05</div><span class="availability available-label">Available</span></div>
+          <h3>Advanced Text Manipulation</h3>
+          <p>Build more powerful search and transformation workflows using regular expressions, field processing, and stream editing.</p>
+	  <p>Lab Design by NG</p>
+          <div class="tag-list"><span class="tag">grep</span><span class="tag">awk</span><span class="tag">sed</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab5">Lab 5</a></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 06</div><span class="availability planned-label">Available</span></div>
+          <h3>Files, Directories, and Archives</h3>
+          <p>Create, copy, move, and remove files while preserving a safe and organized workspace.</p>
+	  <p>Lab Design by SW</p>
+          <div class="tag-list"><span class="tag">cp</span><span class="tag">mv</span><span class="tag">rm</span><span class="tag">mkdir</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab6">Lab 6</a></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 07</div><span class="availability planned-label">Available</span></div>
+          <h3>Processes and Job Control</h3>
+          <p>Inspect running processes, manage foreground and background jobs, and safely stop or reprioritize programs.</p>
+	  <p>Lab Design by NG</p>
+          <div class="tag-list"><span class="tag">ps</span><span class="tag">top</span><span class="tag">jobs</span><span class="tag">kill</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab7">Under Development</a></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 08</div><span class="availability planned-label">Available</span></div>
+          <h3>Shell Redirection and Pipelines</h3>
+          <p>Connect commands, redirect input and output, capture errors, and assemble repeatable command-line workflows.</p>
+	  <p>Lab Design by NG</p>
+          <div class="tag-list"><span class="tag">pipes</span><span class="tag">&gt;</span><span class="tag">&gt;&gt;</span><span class="tag">stderr</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab8">Lab 8</a></div>
+        </article>
+
+        <article class="lab-card planned">
+          <div class="card-topline"><div class="lab-number">LAB 09</div><span class="availability planned-label">Planned</span></div>
+          <h3>Networking from the Command Line</h3>
+          <p>Inspect interfaces, addresses, routes, listening services, and remote connectivity using standard Linux networking tools.</p>
+	  <p>Lab Design by CS</p>
+          <div class="tag-list"><span class="tag">ip</span><span class="tag">ping</span><span class="tag">ss</span><span class="tag">curl</span></div>
+          <div class="actions"><span class="btn btn-disabled">Coming Soon</span></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 10</div><span class="availability planned-label">Available</span></div>
+          <h3>System Logs</h3>
+          <p>Gather and inspect system activity, and locate evidence in common Linux log files.</p>
+	  <p>Lab Design by NG</p>
+          <div class="tag-list"><span class="tag">uname</span><span class="tag">hostname</span><span class="tag">journalctl</span><span class="tag">logs</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab10/">Start Lab 10</a></div>
+        </article>
+
+        <article class="lab-card planned">
+          <div class="card-topline"><div class="lab-number">LAB 11</div><span class="availability planned-label">Planned</span></div>
+          <h3>Shell Variables and Scripting</h3>
+          <p>Use variables, arguments, conditions, loops, and executable scripts to automate repetitive Linux tasks.</p>
+	  <p>Lab Design by TBD</p>
+          <div class="tag-list"><span class="tag">bash</span><span class="tag">variables</span><span class="tag">loops</span><span class="tag">scripts</span></div>
+          <div class="actions"><span class="btn btn-disabled">Coming Soon</span></div>
+        </article>
+
+        <article class="lab-card planned challenge-card">
+          <div class="card-topline"><div class="lab-number">LAB 12</div><span class="availability challenge-label">Challenge</span></div>
+          <h3>Linux Operations Challenge</h3>
+          <p>Combine navigation, searching, permissions, process inspection, networking, and scripting skills in a multi-stage analyst mission.</p>
+	  <p>Lab Design by TBD</p>
+          <div class="tag-list"><span class="tag">investigate</span><span class="tag">recover</span><span class="tag">automate</span><span class="tag">report</span></div>
+          <div class="actions"><span class="btn btn-disabled">Coming Soon</span></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 13</div><span class="availability available-label">Available</span></div>
+          <h3>PolyBandit</h3>
+          <p>A polymorphic clone of the popular Bandit wargame from Overthewire.org. Each level closely mirrors levesl in the original game. However, in this version, every player gets their own answers. You can also skip levels if you want.</p>
+	  <p>Lab Design by NG</p>
+          <div class="tag-list"><span class="tag">pwd</span><span class="tag">whoami</span><span class="tag">ls</span><span class="tag">cd</span><span class="tag">cat</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab13/index.html">Start Lab 13</a></div>
+        </article>
+
+        <article class="lab-card available">
+          <div class="card-topline"><div class="lab-number">LAB 14</div><span class="availability available-label">Available</span></div>
+          <h3>Compression</h3>
+          <p>This exercise explores compression programs that are generally available on a Linux system. .zip, .tar, .gz, .bz2, and .xz are all presented. Learn how to decompress these file types to find the flags that are in the data.<p>
+	  <p>Lab Design by NG</p>
+	  <div class="tag-list"><span class="tag">zip</span><span class="tag">gzip</span><span class="tag">tar</span><span class="tag">bzip2</span><span class="tag">xz</span></div>
+          <div class="actions"><a class="btn btn-primary" href="lab14/index.html">Start Lab 14</a></div>
+        </article>
+
+      </div>
+    </section>
+    <section class="footer-brief" aria-label="Development note">
+      <strong>Activity status:</strong> Some lab are still in development or testing.
+    </section>
+  </main>
 </body>
 </html>

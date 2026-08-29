@@ -17,12 +17,18 @@
     }
 
     const template = await response.text();
+    const initrds = Array.isArray(cfg.initrds)
+      ? cfg.initrds
+      : [cfg.initrd || cfg.rootfs || "./rootfs.cpio.gz"];
+    if (initrds.length === 0 || initrds.some((url) => typeof url !== "string" || !url.trim())) {
+      throw new Error("POLYLINUX_LAB.initrds must contain at least one non-empty URL.");
+    }
     const html = replaceAll(template, {
       LAB_TITLE: cfg.title || "PolyLinux VM",
       ASSET_BASE: cfg.assetBase || "../",
       LAB_MD: cfg.md || cfg.instructions || "./fs-navigation.md",
       BZIMAGE: cfg.bzimage || cfg.bzImage || "./bzImage",
-      INITRD: cfg.initrd || cfg.rootfs || "./rootfs.cpio.gz"
+      INITRDS: JSON.stringify(initrds)
     });
 
     document.open();

@@ -2,7 +2,8 @@
 title: "PolyLinux File System Navigation"
 short_title: "FS-Navigation"
 panel_title: "Learning Path"
-form_url: "https://forms.office.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVUm61LpTnj6hRZqRDuq_1EWvYxyBURUk3UkU4UFNSQ1JBRk1SM0lJTjlORVpKQy4u"
+form_url: "https://forms.office.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVUm61LvTNagO6dAdDlZnocMnGFFZURTZYTjZNT0pLTlNDNk81QjFOTTlUOU5EUC4u"
+
 ---
 
 ## START: PolyLinux File System Navigation
@@ -188,6 +189,12 @@ cat different-file-name.txt
 ```
 
 Replace `different-file-name.txt` with the actual filename you find.
+
+A helpful way to inspect all text files is:
+
+```bash
+for f in *.txt; do echo "--- $f ---"; cat "$f"; done
+```
 
 ### What to submit
 
