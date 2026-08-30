@@ -6,7 +6,7 @@ form_url: "https://forms.office.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVU
 
 ---
 
-## START: PolyLinux File System Navigation
+# START: PolyLinux File System Navigation
 
 In this lab you will learn essential Linux command-line skills. You will explore the file system, inspect files and directories, and practice using common Linux commands.
 
@@ -92,7 +92,7 @@ tail README.txt
 
 > **Hint:** If a file is long, try `less filename` so you can scroll through it.
 
-## 1: Level Basic1
+## 1: Level level1
 
 ### Goal
 
@@ -115,7 +115,7 @@ Submit the text printed by `cat inhere.txt`.
 
 Enter the command `nextlevel`
 
-## 2: Level Basic2
+## 2: Level level2
 
 ### Goal
 
@@ -138,7 +138,7 @@ Submit the text printed by `cat .inhere.txt`.
 
 Enter the command `nextlevel`
 
-## 3: Level Basic3
+## 3: Level level3
 
 ### Goal
 
@@ -168,7 +168,7 @@ Submit the contents of the non-README `.txt` file.
 
 Enter the command `nextlevel`
 
-## 4: Level Basic4
+## 4: Level level4
 
 ### Goal
 
@@ -204,7 +204,7 @@ Submit the contents of the different `.txt` file.
 
 Enter the command `nextlevel`
 
-## 5: Level Basic5
+## 5: Level level5
 
 ### Goal
 
@@ -236,7 +236,7 @@ Submit the contents of `inhere.txt` from the differently named directory.
 
 Enter the command `nextlevel`
 
-## 6: Level Basic6
+## 6: Level level6
 
 ### Goal
 
@@ -272,7 +272,7 @@ Submit the contents of the discovered `inhere.txt` file.
 
 Enter the command `nextlevel`
 
-## 7: Level Basic7
+## 7: Level level7
 
 ### Goal
 
@@ -306,7 +306,7 @@ Submit only the characters after the dash in the directory name.
 
 Enter the command `nextlevel`
 
-## 8: Level Basic8
+## 8: Level level8
 
 ### Goal
 
@@ -348,7 +348,7 @@ Submit only the characters after the dash in the correct directory name.
 
 Enter the command `nextlevel`
 
-## 9: Level Basic9
+## 9: Level level9
 
 ### Goal
 
@@ -384,7 +384,7 @@ Submit only the characters after the dash and before `.txt` in the correct filen
 
 Enter the command `nextlevel`
 
-## 10: Level Basic10
+## 10: Level level10
 
 ### Goal
 

@@ -2,10 +2,11 @@
 title: "File Manipulation Lab"
 short_title: "FM-Lab"
 panel_title: "Learning Path"
-form_url: "https://forms.office.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVUm61LvTNagO6dAdDlZnocMnGFFZUREw5RUJVWlJCS1VZWTBQWFNMTUVTVUdNVS4u"
+form_url: ""
+
 ---
 
-## START: File Manipulation Lab
+# START: File Manipulation Lab
 
 In this lab you will practice core Linux file manipulation skills. Each level gives you a small filesystem task, such as creating a file, creating a directory, copying evidence, moving suspicious files, removing incorrect files, and organizing an incident response workspace.
 
@@ -14,7 +15,7 @@ Throughout the lab:
 - Read the current level's `README.txt` carefully.
 - Use the terminal on the right to inspect the files and complete the task.
 - Change only the files and directories required by `README.txt`.
-- Run `validate` after the filesystem matches every requirement to print your key.
+- submit the requested answer through the external form.
 - Use the Quick Reference if you need a reminder for common commands.
 
 **Let's get started!**
@@ -37,7 +38,7 @@ If the email prompt appears automatically, do not start another installer. Other
 sh installfmlab.sh
 ```
 
-Enter your email address when prompted. Your exact email address and the VM's current date generate your personalized level targets. Wait until the installer prints `done` and places you in `fmlab1` before entering level commands.
+Enter your email address when prompted. Your exact email address and the VM's current date generate your personalized level targets. Wait until the installer prints `done` and places you in `level1` before entering level commands.
 
 ## REF: Quick reference
 
@@ -133,7 +134,7 @@ Do not create the file at the top level of your home directory, and leave the ex
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -170,7 +171,7 @@ Do not add, remove, or rename any other case directory. Then validate.
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -208,7 +209,7 @@ The two files must match, and the original log must remain unchanged. Then valid
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -247,7 +248,7 @@ The suspicious file must no longer remain in `downloads`. Leave every normal dow
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -278,7 +279,7 @@ The incorrect filename is not stated directly. Infer it by comparing the filenam
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -315,7 +316,7 @@ Use `rmdir`. Leave every active case directory and its `notes.txt` file unchange
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -353,7 +354,7 @@ Keep the original log unchanged in `evidence`, then validate.
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -389,7 +390,7 @@ The selected log must no longer remain at the top level of your home directory. 
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -430,7 +431,7 @@ Copy the notes file into the backup directory. Keep the original notes file in y
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### Continue to the next level
 
@@ -472,11 +473,11 @@ Complete every requirement below using the personalized names in `README.txt`:
 - Create the named empty completion marker directly in `incident`.
 - Leave every other incident file unchanged.
 
-Run `validate` only after all requirements are satisfied.
+submit the requested answer through the external form.
 
 ### What to submit
 
-Run `validate` and submit the key if your instructor asks for it.
+submit the requested answer through the external form.
 
 ### End of lab
 

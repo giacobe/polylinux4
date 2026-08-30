@@ -3,9 +3,10 @@ title: "Polylinux Text Manipulation Lab"
 short_title: "Text-Manipulation"
 panel_title: "Learning Path"
 form_url: "https://forms.office.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVUm61LvTNagO6dAdDlZnocMnGFFZUMEk0STYyNzhCMVpEODdMV1E2SDBSSUFHNi4u"
+
 ---
 
-## START: Polylinux Text Manipulation Lab
+# START: Polylinux Text Manipulation Lab
 
 In this lab you will learn essential Linux command-line skills. This lab aims to help you figure out how exactly certain commands work, namely those that involve text manipulation
 Throughout the lab:
