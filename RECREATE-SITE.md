@@ -101,19 +101,32 @@ launcher:
 
 | Lab | Kernel destination | Initrd destination |
 | --- | --- | --- |
-| 1 | `lab1/bzImage` | `lab1/rootfs.cpio.gz` |
-| 2 | `lab2/bzImage` | `lab2/rootfs.cpio.gz` |
+| 1 | `lab1/packaged.bzImage` | `lab1/packaged.rootfs.cpio.gz` |
+| 2 | `lab2/packaged.bzImage` | `lab2/packaged.rootfs.cpio.gz` |
 | 3 | `lab3/packaged.bzImage` | `lab3/packaged.rootfs.cpio.gz` |
 | 5 | `lab5/packaged.bzImage` | `lab5/packaged.rootfs.cpio.gz` |
 | 6 | `lab6/packaged.bzImage` | `lab6/packaged.rootfs.cpio.gz` |
 | 7 | `lab7/packaged.bzImage` | `lab7/packaged.rootfs.cpio.gz` |
-| 8 | `lab8/redirection-pipelines.bzImage` | `lab8/redirection-pipelines.rootfs.cpio.gz` |
+| 8 | `lab8/packaged.bzImage` | `lab8/packaged.rootfs.cpio.gz` |
 | 10 | `lab10/packaged.bzImage` | `lab10/packaged.rootfs.cpio.gz` |
 | 13 | `lab13/packaged.bzImage` | `lab13/packaged.rootfs.cpio.gz` |
 | 14 | `lab14/packaged.bzImage` | `lab14/packaged.rootfs.cpio.gz` |
 
 These files are ignored by Git. Their manual placement is the only required
 deployment step that cannot be reproduced by cloning this repository.
+
+The release ZIP is rooted exactly like this repository. Upload it to the same
+directory as the top-level `index.html`, verify its published SHA-256 value,
+and extract it in place. For example:
+
+```sh
+sha256sum -c polylinux-standardized-site-images-20260830.zip.sha256
+unzip -o polylinux-standardized-site-images-20260830.zip
+```
+
+The bundle also contains `lab9/` and `lab11/` images for preservation and
+testing. Their catalog entries remain unpublished until those labs are
+separately approved for publication.
 
 ## 4. Configure the web server
 
@@ -219,13 +232,18 @@ been verified, so rollback does not depend on rebuilding VM images.
 For an existing lab:
 
 1. Update and test the payload in its individual repository.
-2. Build it with the Buildroot configuration named in that repository README.
-3. Package and boot-test the generated VM pair.
-4. Update the launcher or Markdown in this repository when necessary.
-5. Review all external links and exact VM filenames.
-6. Commit and push source changes.
-7. Stage the site and manually add the generated VM artifacts.
-8. Run the complete verification checklist before production deployment.
+2. Build it with the Buildroot configuration named in that repository README,
+   or reuse the validated artifact for that configuration when the baseline
+   itself has not changed.
+3. Package and boot-test the generated VM pair. Confirm that `/root/.profile`
+   starts `/root/install.sh` automatically after the root login.
+4. Run `scripts/sync-lab-content.ps1` from this repository to copy the
+   authoritative participant Markdown from the sibling lab repositories.
+5. Update the launcher or catalog metadata in this repository when necessary.
+6. Review all external links and exact VM filenames.
+7. Commit and push source changes.
+8. Stage the site and manually add the generated VM artifacts.
+9. Run the complete verification checklist before production deployment.
 
 For a lab that is currently incomplete, leave its catalog state unchanged
 until its payload, instructions, launcher, answer-form decision, and tested VM
