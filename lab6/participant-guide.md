@@ -32,13 +32,10 @@ root
 
 No password is required. Just press **Enter**.
 
-If the email prompt appears automatically, do not start another installer. Otherwise, change into the directory containing `installfmlab.sh`, `resources.sh`, the ten level scripts, and the `words` directory. Run:
-
-```bash
-sh installfmlab.sh
-```
-
-Enter your email address when prompted. Your exact email address and the VM's current date generate your personalized level targets. Wait until the installer prints `done` and places you in `level1` before entering level commands.
+The root login automatically starts the installer. Enter your email address and
+confirm the normalized address. The VM displays your exercise code and opens
+Level 1 as soon as it is ready while the remaining levels continue building in
+parallel.
 
 ## REF: Quick reference
 

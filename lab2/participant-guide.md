@@ -29,6 +29,11 @@ root
 
 No password is required. Just press **Enter**.
 
+The root login automatically starts the lab installer. Enter your email address
+and confirm the normalized address. The VM displays an exercise code, selects one
+theme for the attempt, and opens Level 1 as soon as it is ready while the remaining
+levels continue building in parallel.
+
 ## REF: Quick Reference
 
 | Task | Command |
@@ -88,7 +93,7 @@ Start in the level directory:
 ls
 cat key.txt
 cat my_psswd
-cat my_psswd | tr 1356780@# iesgtboah
+tr 'A-Za-z' 'N-ZA-Mn-za-m' < my_psswd
 ```
 
 ### What to submit
@@ -112,7 +117,7 @@ Start in the level directory:
 ```bash
 ls
 cat my_psswd
-uniq my_psswd
+uniq -u my_psswd
 ```
 
 ### What to submit
@@ -138,7 +143,7 @@ ls
 ```
 
 ```bash
-grep millionth my_psswd
+grep NOTICE my_psswd
 ```
 
 ### What to submit
@@ -184,7 +189,7 @@ Start in the level directory:
 
 ```bash
 ls
-sort my_psswd
+sort my_psswd | tail -n 1
 
 ```
 
@@ -208,7 +213,7 @@ Start in the level directory:
 
 ```bash
 ls
-sort my_psswd | uniq
+sort my_psswd | uniq -u
 ```
 
 ### What to submit
@@ -231,7 +236,7 @@ Start in the level directory:
 
 ```bash
 ls
-uniq my_psswd | tr GgHhIiJjKkLlMmNnOoPpQqRrSs abcdefghijklmnopqrstuvwxyz
+uniq my_psswd | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 
 ### What to submit
@@ -254,7 +259,7 @@ Start in the level directory:
 
 ```bash
 ls
-sort my_psswd | uniq | head
+sort my_psswd | uniq | head -n 1
 ```
 
 ### What to submit
@@ -300,7 +305,7 @@ Start in the level directory:
 
 ```bash
 ls
-sort my_psswd | uniq | tr GgHhIiJjKkLlMmNnOoPpQqRrSs abcdefghijklmnopqrstuvwxyz
+sort my_psswd | uniq -u | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 
 ### What to submit
@@ -310,23 +315,3 @@ Submit the code that is next to "rightcode"
 ### Go on to the next level
 
 Enter the command `nextlevel`
-
-## 11: Level 11
-
-### Goal
-
-The code is hidden deep within a large file, as well as translated. You need to use grep, sort, uniq -u, and tr to get it.
-
-### Steps
-
-Start in the level directory:
-
-```bash
-ls
-cat my_psswd | tr GgHhIiJjKkLlMmNnOoPpQqRrSs abcdefghijklmnopqrstuvwxyz | grep completed | sort | uniq -u
-```
-You can also ignore cat, and do tr last, but you cannot use completed as the search term for grep
-
-### What to submit
-
-The code that is found after the word "millionth"

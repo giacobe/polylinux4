@@ -30,6 +30,11 @@ root
 
 No password is required. Just press **Enter**.
 
+The root login automatically starts the lab installer. Enter your email address
+when prompted, confirm the normalized address, and wait while Level 1 is prepared.
+The VM then opens Level 1 automatically while the remaining levels continue
+building in parallel.
+
 ## REF: Quick Reference
 
 | Task | Command |

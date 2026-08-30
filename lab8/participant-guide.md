@@ -13,16 +13,11 @@ one-time commands into repeatable workflows.
 
 ## Starting the exercise
 
-Log in as `root`. The lab installer starts automatically in the published VM. If
-you need to start it manually, run:
-
-```sh
-cd /root
-./install.sh
-```
-
-Confirm your email carefully. Your email and the exercise date determine your
-generated files and answers. The installer opens Level 1 when it finishes.
+Log in as `root`; no password is required. The root login automatically starts
+the lab installer. Confirm your normalized email address carefully. Your email
+and the exercise date determine your generated files and answers. The VM opens
+Level 1 as soon as it is ready while the remaining levels continue building in
+parallel.
 
 At any level:
 

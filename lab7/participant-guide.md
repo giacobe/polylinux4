@@ -29,9 +29,10 @@ root
 
 No password is required. Press **Enter**.
 
-If prompted, enter and confirm your email address. Setup uses your email
-address and the exercise date to personalize the levels. After installation,
-you will enter `level1` automatically.
+The root login automatically starts the installer. Enter and confirm your email
+address. Setup displays an exercise code and uses the normalized address and
+exercise date to personalize the levels. You enter `level1` as soon as it is ready
+while the remaining levels continue building in parallel.
 
 ## Start a Level
 
