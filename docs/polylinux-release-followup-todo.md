@@ -50,4 +50,3 @@ When recording a server finding, include when practical:
 - date and approximate time of the test.
 
 Do not record real participant passwords or other sensitive participant data.
-
