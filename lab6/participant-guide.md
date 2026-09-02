@@ -15,7 +15,7 @@ Throughout the lab:
 - Read the current level's `README.txt` carefully.
 - Use the terminal on the right to inspect the files and complete the task.
 - Change only the files and directories required by `README.txt`.
-- submit the requested answer through the external form.
+- Run `validate` after completing each filesystem task and submit its printed key through the exercise grading form.
 - Use the Quick Reference if you need a reminder for common commands.
 
 **Let's get started!**
@@ -98,7 +98,7 @@ The `validate` command always examines the current level user's entire home dire
 
 The key is generated from a cleaned recursive file listing built with common shell tools. Full displayed paths, including ordinary spaces in filenames, sizes, permissions, owner, group, and directory structure affect the key. Dates and times are ignored. File contents are not hashed directly, but a content change that changes a file's size changes the key.
 
-Extra files, missing files, renamed files, permission changes, ownership changes, and changes to `README.txt` produce a different key. Change only what the level requires. If your instructor uses a form, submit the key printed by `validate`.
+Extra files, missing files, renamed files, permission changes, ownership changes, and changes to `README.txt` produce a different key. Change only what the level requires. Submit the exact 10-character, case-sensitive key printed by `validate` to the exercise grading form. The VM does not know whether a key is correct.
 
 ## 1: Level 1
 
@@ -131,7 +131,7 @@ Do not create the file at the top level of your home directory, and leave the ex
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -168,7 +168,7 @@ Do not add, remove, or rename any other case directory. Then validate.
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -206,7 +206,7 @@ The two files must match, and the original log must remain unchanged. Then valid
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -245,7 +245,7 @@ The suspicious file must no longer remain in `downloads`. Leave every normal dow
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -276,7 +276,7 @@ The incorrect filename is not stated directly. Infer it by comparing the filenam
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -313,7 +313,7 @@ Use `rmdir`. Leave every active case directory and its `notes.txt` file unchange
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -351,7 +351,7 @@ Keep the original log unchanged in `evidence`, then validate.
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -387,7 +387,7 @@ The selected log must no longer remain at the top level of your home directory. 
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -428,7 +428,7 @@ Copy the notes file into the backup directory. Keep the original notes file in y
 
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` and submit its exact 10-character key to the exercise grading form.
 
 ### Continue to the next level
 
@@ -470,11 +470,9 @@ Complete every requirement below using the personalized names in `README.txt`:
 - Create the named empty completion marker directly in `incident`.
 - Leave every other incident file unchanged.
 
-submit the requested answer through the external form.
-
 ### What to submit
 
-submit the requested answer through the external form.
+Run `validate` only after completing every requirement, then submit its exact 10-character key to the exercise grading form.
 
 ### End of lab
 
