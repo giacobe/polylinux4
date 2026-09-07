@@ -2,7 +2,7 @@
 title: "PolyLinux Logs"
 short_title: "Logs"
 panel_title: "Learning Path"
-form_url: "https://forms.microsoft.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVUm61LvTNagO6dAdDlZnocMnGFFZUREk0MVJBRlRRTjhBRDRQVzVTRkZETjJOSi4u"
+form_url: "https://forms.office.com/Pages/ResponsePage.aspx?id=RY30fNs9iUOpwcEVUm61LvTNagO6dAdDlZnocMnGFFZUNTg2M1ZXQ1laR1FRQlhDSU1OMDlJVUVQVy4u"
 
 ---
 
