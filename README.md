@@ -5,7 +5,7 @@ published at <https://polylab.ist.psu.edu/polylinux/>.
 
 It contains:
 
-- the 14-lab catalog;
+- the curriculum-oriented homepage and its first-party CSS, JavaScript, and PNG assets;
 - the shared page template, CSS, JavaScript, v86 runtime, WebAssembly module,
   and BIOS files;
 - launch pages and participant Markdown for every currently published lab;

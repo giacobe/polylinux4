@@ -1,185 +1,181 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PolyLinux Activities | Linux Command-Line Labs</title>
-  <link rel="stylesheet" href="./common.css" />
-  <link rel="stylesheet" href="polylinux.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PolyLinux meaningfully repeatable Linux command-line activities from Penn State IST.">
+  <title>PolyLinux | Command-Line Practice</title>
+  <link rel="stylesheet" href="polylinux-home.css">
+  <script src="polylinux-home.js" defer></script>
 </head>
 <body>
-  <main class="page">
-    <header class="topbar">
-      <div class="brand"><div class="brand-mark">&gt;_</div><div>PolyLinux Activities</div></div>
-      <div class="status">LINUX OPERATIONS · COMMAND-LINE MISSIONS</div>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <section class="hero" aria-labelledby="module-title">
-      <div class="briefing">
-        <div class="eyebrow">Operations Briefing</div>
-        <h1 id="module-title">Master the system one command at a time.</h1>
-        <p class="subtitle">Work inside a Linux environment used by cybersecurity analysts, administrators, and incident responders. Each activity develops practical command-line skills through guided missions, hidden objectives, and hands-on system exploration.</p>
-        <div class="briefing-status">
-          <span><strong>14</strong> planned activity sets</span>
-          <span><strong>10</strong> available now</span>
-          <span><strong>4</strong> in development</span>
-        </div>
+  <header class="site-header">
+    <div class="institution-bar">
+      <div class="container institution-inner">
+        <a class="institution-logo" href="https://ist.psu.edu/" aria-label="Penn State College of Information Sciences and Technology home">
+          <img src="PSU_IST_CMYK_REV_2C.png" alt="Penn State College of Information Sciences and Technology">
+        </a>
       </div>
+    </div>
 
-      <aside class="side-panel" aria-label="Linux terminal preview">
-        <div class="terminal-window">
-          <div class="terminal-bar"><div class="terminal-dots"><span></span><span></span><span></span></div><span>analyst@polylinux:~</span></div>
-          <div class="terminal-screen">
-            <p><span class="prompt">analyst@polylinux</span>:<span class="path">~</span>$ whoami</p>
-            <p class="output">junior_analyst</p>
-            <p><span class="prompt">analyst@polylinux</span>:<span class="path">~</span>$ pwd</p>
-            <p class="output">/home/analyst</p>
-            <p><span class="prompt">analyst@polylinux</span>:<span class="path">~</span>$ ls missions</p>
-            <p class="output"><span class="directory">lab1</span> <span class="directory">lab2</span> <span class="locked">future_labs</span></p>
-            <p><span class="prompt">analyst@polylinux</span>:<span class="path">~</span>$ select-mission <span class="cursor"></span></p>
+    <div class="belt-strip belt-strip--compact" aria-label="PolyLinux belt progression">
+      <span class="belt-white" title="White belt"></span><span class="belt-yellow" title="Yellow belt"></span><span class="belt-orange" title="Orange belt"></span><span class="belt-green" title="Green belt"></span><span class="belt-blue" title="Blue belt"></span><span class="belt-purple" title="Purple belt"></span><span class="belt-brown" title="Brown belt"></span><span class="belt-red" title="Red belt"></span><span class="belt-black" title="Black belt"></span>
+    </div>
+
+    <nav class="container primary-nav" aria-label="PolyLinux primary navigation">
+      <a class="project-name" href="#main-content">
+        <strong>PolyLinux</strong>
+        <span>A PolyLab Project · Penn State IST</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#practice">How practice works</a>
+        <a href="#pathways">Training pathways</a>
+        <a href="#belts">Belts &amp; training record</a>
+        <a class="button button--outline" href="https://forms.cloud.microsoft/r/fG9NqPC4Zq" target="_blank" rel="noopener noreferrer">Request training record <span aria-hidden="true">↗</span></a>
+        <a class="button button--gold" href="#pathways">Begin training</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow eyebrow--gold">Practice changes the practitioner</p>
+          <h1>Build cyber muscle memory.</h1>
+          <p class="hero-copy">PolyLinux turns Linux command-line learning into a practice discipline. Return on another day and work with new target data, building fluency through meaningful repetition.</p>
+          <div class="button-row">
+            <a class="button button--gold button--large" href="#pathways">Explore pathways <span aria-hidden="true">→</span></a>
+            <a class="button button--ghost button--large" href="#belts">See how belts work</a>
           </div>
         </div>
-      </aside>
-    </section>
-
-    <section aria-labelledby="choose-lab">
-      <div class="section-head">
-        <div><div class="eyebrow">Select an Activity</div><h2 id="choose-lab">PolyLinux Lab Series</h2></div>
-        <p>Begin with the available foundational activities. Additional command-line, administration, and security labs will be added as they are completed.</p>
-      </div>
-
-      <div class="labs polylinux-labs">
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 01</div><span class="availability available-label">Available</span></div>
-          <h3>Basic File System Navigation</h3>
-          <p>Identify your user, determine your current location, list directory contents, move through the file system, and read text files.</p>
-	  <p>Lab Design by NG</p>
-          <div class="tag-list"><span class="tag">pwd</span><span class="tag">whoami</span><span class="tag">ls</span><span class="tag">cd</span><span class="tag">cat</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab1/index.html">Start Lab 1</a></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 02</div><span class="availability available-label">Available</span></div>
-          <h3>Text Manipulation and Search</h3>
-          <p>Transform, search, organize, and filter text while locating useful information across files and directories.</p>
-	  <p>Lab Design by JB</p>
-          <div class="tag-list"><span class="tag">tr</span><span class="tag">grep</span><span class="tag">uniq</span><span class="tag">sort</span><span class="tag">find</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab2/index.html">Start Lab 2</a></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 03</div><span class="availability planned-label">Available</span></div>
-          <h3>File System Navigation</h3>
-          <p>Work with absolute and relative paths, hidden files, directory trees, links, file metadata, and more complex navigation tasks.</p>
-	  <p>Lab Design by NG</p>
-          <div class="tag-list"><span class="tag">paths</span><span class="tag">tree</span><span class="tag">stat</span><span class="tag">links</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab3">Start Lab 3</a></div>
-        </article>
-
-        <article class="lab-card planned">
-          <div class="card-topline"><div class="lab-number">LAB 04</div><span class="availability planned-label">Planned</span></div>
-          <h3>Users, Groups, and Permissions</h3>
-          <p>Examine Linux identities, group membership, ownership, permission bits, and the controls that protect system resources.</p>
-	  <p>Lab Design by BA</p>
-          <div class="tag-list"><span class="tag">id</span><span class="tag">groups</span><span class="tag">chmod</span><span class="tag">chown</span></div>
-          <div class="actions"><span class="btn btn-disabled">Coming Soon</span></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 05</div><span class="availability available-label">Available</span></div>
-          <h3>Advanced Text Manipulation</h3>
-          <p>Build more powerful search and transformation workflows using regular expressions, field processing, and stream editing.</p>
-	  <p>Lab Design by NG</p>
-          <div class="tag-list"><span class="tag">grep</span><span class="tag">awk</span><span class="tag">sed</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab5">Lab 5</a></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 06</div><span class="availability planned-label">Available</span></div>
-          <h3>Files, Directories, and Archives</h3>
-          <p>Create, copy, move, and remove files while preserving a safe and organized workspace.</p>
-	  <p>Lab Design by SW</p>
-          <div class="tag-list"><span class="tag">cp</span><span class="tag">mv</span><span class="tag">rm</span><span class="tag">mkdir</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab6">Lab 6</a></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 07</div><span class="availability planned-label">Available</span></div>
-          <h3>Processes and Job Control</h3>
-          <p>Inspect running processes, manage foreground and background jobs, and safely stop or reprioritize programs.</p>
-	  <p>Lab Design by NG</p>
-          <div class="tag-list"><span class="tag">ps</span><span class="tag">top</span><span class="tag">jobs</span><span class="tag">kill</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab7">Under Development</a></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 08</div><span class="availability planned-label">Available</span></div>
-          <h3>Shell Redirection and Pipelines</h3>
-          <p>Connect commands, redirect input and output, capture errors, and assemble repeatable command-line workflows.</p>
-	  <p>Lab Design by NG</p>
-          <div class="tag-list"><span class="tag">pipes</span><span class="tag">&gt;</span><span class="tag">&gt;&gt;</span><span class="tag">stderr</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab8">Lab 8</a></div>
-        </article>
-
-        <article class="lab-card planned">
-          <div class="card-topline"><div class="lab-number">LAB 09</div><span class="availability planned-label">Planned</span></div>
-          <h3>Networking from the Command Line</h3>
-          <p>Inspect interfaces, addresses, routes, listening services, and remote connectivity using standard Linux networking tools.</p>
-	  <p>Lab Design by CS</p>
-          <div class="tag-list"><span class="tag">ip</span><span class="tag">ping</span><span class="tag">ss</span><span class="tag">curl</span></div>
-          <div class="actions"><span class="btn btn-disabled">Coming Soon</span></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 10</div><span class="availability planned-label">Available</span></div>
-          <h3>System Logs</h3>
-          <p>Gather and inspect system activity, and locate evidence in common Linux log files.</p>
-	  <p>Lab Design by NG</p>
-          <div class="tag-list"><span class="tag">uname</span><span class="tag">hostname</span><span class="tag">journalctl</span><span class="tag">logs</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab10/">Start Lab 10</a></div>
-        </article>
-
-        <article class="lab-card planned">
-          <div class="card-topline"><div class="lab-number">LAB 11</div><span class="availability planned-label">Planned</span></div>
-          <h3>Shell Variables and Scripting</h3>
-          <p>Use variables, arguments, conditions, loops, and executable scripts to automate repetitive Linux tasks.</p>
-	  <p>Lab Design by TBD</p>
-          <div class="tag-list"><span class="tag">bash</span><span class="tag">variables</span><span class="tag">loops</span><span class="tag">scripts</span></div>
-          <div class="actions"><span class="btn btn-disabled">Coming Soon</span></div>
-        </article>
-
-        <article class="lab-card planned challenge-card">
-          <div class="card-topline"><div class="lab-number">LAB 12</div><span class="availability challenge-label">Challenge</span></div>
-          <h3>Linux Operations Challenge</h3>
-          <p>Combine navigation, searching, permissions, process inspection, networking, and scripting skills in a multi-stage analyst mission.</p>
-	  <p>Lab Design by TBD</p>
-          <div class="tag-list"><span class="tag">investigate</span><span class="tag">recover</span><span class="tag">automate</span><span class="tag">report</span></div>
-          <div class="actions"><span class="btn btn-disabled">Coming Soon</span></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 13</div><span class="availability available-label">Available</span></div>
-          <h3>PolyBandit</h3>
-          <p>A polymorphic clone of the popular Bandit wargame from Overthewire.org. Each level closely mirrors levesl in the original game. However, in this version, every player gets their own answers. You can also skip levels if you want.</p>
-	  <p>Lab Design by NG</p>
-          <div class="tag-list"><span class="tag">pwd</span><span class="tag">whoami</span><span class="tag">ls</span><span class="tag">cd</span><span class="tag">cat</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab13/index.html">Start Lab 13</a></div>
-        </article>
-
-        <article class="lab-card available">
-          <div class="card-topline"><div class="lab-number">LAB 14</div><span class="availability available-label">Available</span></div>
-          <h3>Compression</h3>
-          <p>This exercise explores compression programs that are generally available on a Linux system. .zip, .tar, .gz, .bz2, and .xz are all presented. Learn how to decompress these file types to find the flags that are in the data.<p>
-	  <p>Lab Design by NG</p>
-	  <div class="tag-list"><span class="tag">zip</span><span class="tag">gzip</span><span class="tag">tar</span><span class="tag">bzip2</span><span class="tag">xz</span></div>
-          <div class="actions"><a class="btn btn-primary" href="lab14/index.html">Start Lab 14</a></div>
-        </article>
-
+        <aside class="practice-loop" aria-label="PolyLinux practice loop">
+          <div class="practice-loop__heading"><span>The practice loop</span><span aria-hidden="true">⌨</span></div>
+          <ol>
+            <li><span>01</span><div><strong>Train</strong><small>Work directly in Linux.</small></div></li>
+            <li><span>02</span><div><strong>Repeat</strong><small>Return to fresh target data.</small></div></li>
+            <li><span>03</span><div><strong>Improve</strong><small>Build speed, judgment, and fluency.</small></div></li>
+            <li><span>04</span><div><strong>Advance</strong><small>Record sustained accomplishment.</small></div></li>
+          </ol>
+        </aside>
       </div>
     </section>
-    <section class="footer-brief" aria-label="Development note">
-      <strong>Activity status:</strong> Some lab are still in development or testing.
+
+    <section class="pathways-section" id="pathways">
+      <div class="container pathways-grid">
+        <div class="pathways-intro">
+          <p class="eyebrow">Suggested routes, not requirements</p>
+          <h2>Explore training pathways.</h2>
+          <p>The pathways reveal a sensible progression and show how activities support one another. Start with foundations, focus on a skill area, or build your own route.</p>
+          <p class="callout"><strong>Your pathway does not determine your belt.</strong><br>Belt progression recognizes successful practice across the activity catalog.</p>
+        </div>
+
+        <div class="accordion-wrap">
+          <button class="expand-all" type="button" aria-expanded="false">Expand all pathways</button>
+          <div class="accordion">
+
+            <details open>
+              <summary><span class="path-icon" aria-hidden="true">◆</span><span><small>Recommended starting point</small><strong>Linux Foundations <em>3 activities</em></strong><span>Develop confidence navigating the shell, understanding the filesystem, and working safely with files.</span></span></summary>
+              <div class="panel">
+                <div class="activity-grid activity-grid--3">
+                  <article class="activity"><header><h3>Basic File System Navigation</h3><span>Available</span></header><p>Identify your user, determine your location, list directory contents, move through the filesystem, and read text files.</p><div class="tags"><code>pwd</code><code>whoami</code><code>ls</code><code>cd</code><code>cat</code></div><a href="/polylinux/lab1/index.html">Open activity <span aria-hidden="true">→</span></a></article>
+                  <article class="activity"><header><h3>File System Navigation</h3><span>Available</span></header><p>Work with absolute and relative paths, hidden files, directory trees, links, and file metadata.</p><div class="tags"><code>paths</code><code>tree</code><code>stat</code><code>links</code></div><a href="/polylinux/lab3">Open activity <span aria-hidden="true">→</span></a></article>
+                  <article class="activity activity--planned"><header><h3>Users, Groups, and Permissions</h3><span>Planned</span></header><p>Examine Linux identities, group membership, ownership, permission bits, and resource controls.</p><div class="tags"><code>id</code><code>groups</code><code>chmod</code><code>chown</code></div><strong class="development">In development</strong></article>
+                </div>
+                <p class="path-skills"><strong>Skills across this pathway</strong> /pwd /whoami /ls /cd /cat /paths /stat /links</p>
+              </div>
+            </details>
+
+            <details>
+              <summary><span class="path-icon" aria-hidden="true">⌕</span><span><small>Search, filter, and transform</small><strong>Data Investigation <em>3 activities</em></strong><span>Build command-line fluency by locating evidence and turning large collections of text into useful information.</span></span></summary>
+              <div class="panel"><div class="activity-grid activity-grid--3">
+                <article class="activity"><header><h3>Text Manipulation and Search</h3><span>Available</span></header><p>Transform, search, organize, and filter text while locating useful information across files and directories.</p><div class="tags"><code>tr</code><code>grep</code><code>uniq</code><code>sort</code><code>find</code></div><a href="/polylinux/lab2/index.html">Open activity <span aria-hidden="true">→</span></a></article>
+                <article class="activity"><header><h3>Advanced Text Manipulation</h3><span>Available</span></header><p>Build stronger search and transformation workflows using regular expressions, field processing, and stream editing.</p><div class="tags"><code>grep</code><code>awk</code><code>sed</code></div><a href="/polylinux/lab5">Open activity <span aria-hidden="true">→</span></a></article>
+                <article class="activity"><header><h3>Shell Redirection and Pipelines</h3><span>Available</span></header><p>Connect commands, redirect input and output, capture errors, and assemble repeatable workflows.</p><div class="tags"><code>pipes</code><code>&gt;</code><code>&gt;&gt;</code><code>stderr</code></div><a href="/polylinux/lab8">Open activity <span aria-hidden="true">→</span></a></article>
+              </div><p class="path-skills"><strong>Skills across this pathway</strong> /tr /grep /sort /uniq /find /awk /sed /pipes</p></div>
+            </details>
+
+            <details>
+              <summary><span class="path-icon" aria-hidden="true">▣</span><span><small>Organize, package, and recover</small><strong>Files and Archives <em>2 activities</em></strong><span>Practice creating, moving, preserving, compressing, and recovering data in a Linux workspace.</span></span></summary>
+              <div class="panel"><div class="activity-grid activity-grid--2">
+                <article class="activity"><header><h3>Files, Directories, and Archives</h3><span>Available</span></header><p>Create, copy, move, and remove files while preserving a safe and organized workspace.</p><div class="tags"><code>cp</code><code>mv</code><code>rm</code><code>mkdir</code></div><a href="/polylinux/lab6">Open activity <span aria-hidden="true">→</span></a></article>
+                <article class="activity"><header><h3>Compression</h3><span>Available</span></header><p>Decompress and inspect ZIP, TAR, GZIP, BZIP2, and XZ data while locating hidden flags.</p><div class="tags"><code>zip</code><code>gzip</code><code>tar</code><code>bzip2</code><code>xz</code></div><a href="/polylinux/lab14/index.html">Open activity <span aria-hidden="true">→</span></a></article>
+              </div><p class="path-skills"><strong>Skills across this pathway</strong> /cp /mv /rm /mkdir /zip /tar /gzip /xz</p></div>
+            </details>
+
+            <details>
+              <summary><span class="path-icon" aria-hidden="true">⌘</span><span><small>Understand what the system is doing</small><strong>System Operations <em>4 activities</em></strong><span>Inspect processes, logs, network behavior, and the operating state of a Linux host.</span></span></summary>
+              <div class="panel"><div class="activity-grid activity-grid--2">
+                <article class="activity"><header><h3>Processes and Job Control</h3><span>Available</span></header><p>Inspect running processes, manage foreground and background jobs, and safely stop or reprioritize programs.</p><div class="tags"><code>ps</code><code>top</code><code>jobs</code><code>kill</code></div><a href="/polylinux/lab7">Open activity <span aria-hidden="true">→</span></a></article>
+                <article class="activity"><header><h3>System Logs</h3><span>Available</span></header><p>Gather and inspect system activity and locate evidence in common Linux log files.</p><div class="tags"><code>uname</code><code>hostname</code><code>journalctl</code><code>logs</code></div><a href="/polylinux/lab10/">Open activity <span aria-hidden="true">→</span></a></article>
+                <article class="activity activity--planned"><header><h3>Networking from the Command Line</h3><span>Planned</span></header><p>Inspect interfaces, addresses, routes, listening services, and remote connectivity.</p><div class="tags"><code>ip</code><code>ping</code><code>ss</code><code>curl</code></div><strong class="development">In development</strong></article>
+                <article class="activity activity--planned"><header><h3>Shell Variables and Scripting</h3><span>Planned</span></header><p>Use variables, arguments, conditions, loops, and executable scripts to automate repetitive tasks.</p><div class="tags"><code>bash</code><code>variables</code><code>loops</code><code>scripts</code></div><strong class="development">In development</strong></article>
+              </div><p class="path-skills"><strong>Skills across this pathway</strong> /ps /top /jobs /kill /journalctl /ip /ss /curl</p></div>
+            </details>
+
+            <details>
+              <summary><span class="path-icon" aria-hidden="true">&gt;_</span><span><small>Combine skills across pathways</small><strong>Integrated Challenges <em>2 activities</em></strong><span>Solve longer challenges that reward investigation, persistence, and judgment across multiple command-line skills.</span></span></summary>
+              <div class="panel"><div class="activity-grid activity-grid--2">
+                <article class="activity"><header><h3>PolyBandit</h3><span>Available</span></header><p>A polymorphic interpretation of the Bandit wargame in which every participant receives individualized answers.</p><div class="tags"><code>navigate</code><code>search</code><code>connect</code><code>recover</code></div><a href="/polylinux/lab13/index.html">Open activity <span aria-hidden="true">→</span></a></article>
+                <article class="activity activity--planned"><header><h3>Linux Operations Challenge</h3><span>Challenge</span></header><p>Combine navigation, searching, permissions, process inspection, networking, and scripting in a multi-stage mission.</p><div class="tags"><code>investigate</code><code>recover</code><code>automate</code><code>report</code></div><strong class="development">In development</strong></article>
+              </div><p class="path-skills"><strong>Skills across this pathway</strong> /investigate /recover /automate /report</p></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="practice-section container" id="practice">
+      <div class="practice-intro">
+        <p class="eyebrow">Designed for practice</p>
+        <h2>Not one-and-done.</h2>
+        <p>A completed activity remains useful. PolyLinux varies the target data so the method stays familiar while the work remains fresh.</p>
+      </div>
+      <div class="principles">
+        <article><span class="principle-icon" aria-hidden="true">↻</span><h3>Meaningfully repeatable</h3><p>New target data makes another attempt feel like practice, not replay.</p></article>
+        <article><span class="principle-icon" aria-hidden="true">✓</span><h3>Spaced over time</h3><p>A successful submission can count once per activity per day.</p></article>
+        <article><span class="principle-icon" aria-hidden="true">◇</span><h3>Breadth encouraged</h3><p>Up to five successful days per activity count toward recognition.</p></article>
+      </div>
+    </section>
+
+    <section class="belts-section" id="belts">
+      <div class="container belts-grid">
+        <div>
+          <p class="eyebrow">Sustained practice earns recognition</p>
+          <h2>Your belt reflects the work you put in.</h2>
+          <p>Every ten successful lab-day submissions advances your PolyLinux belt. A maximum of five successful days from any one activity counts toward advancement, encouraging both repetition and breadth.</p>
+          <p class="small-copy">Training pathways help you decide what to practice. Belt advancement reflects successful practice across the full activity catalog, not completion of a prescribed route.</p>
+        </div>
+        <aside class="record-card">
+          <div class="record-heading"><div><p class="eyebrow">Personal record of accomplishment</p><h3>PolyLinux Training Record</h3></div><span aria-hidden="true">▤</span></div>
+          <div class="belt-strip" aria-label="PolyLinux belt progression"><span class="belt-white"></span><span class="belt-yellow"></span><span class="belt-orange"></span><span class="belt-green"></span><span class="belt-blue"></span><span class="belt-purple"></span><span class="belt-brown"></span><span class="belt-red"></span><span class="belt-black"></span></div>
+          <p>Request a training record showing your successful PolyLinux activity days and current belt progression.</p>
+          <a class="button button--navy button--full" href="https://forms.cloud.microsoft/r/fG9NqPC4Zq" target="_blank" rel="noopener noreferrer">Request your training record <span aria-hidden="true">↗</span></a>
+          <dl><div><dt>Recognition model</dt><dd>10 successful lab-days per belt</dd></div><div><dt>Per-activity credit limit</dt><dd>5 best scores per activity</dd></div></dl>
+        </aside>
+      </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div>
+        <img class="footer-logo" src="PSU_DPCI_RGB_REV_3C.png" alt="Penn State shield">
+        <p>PolyLinux is a PolyLab educational project supporting meaningful, repeatable command-line practice.</p>
+      </div>
+      <nav aria-label="Institutional links">
+        <a href="https://www.psu.edu/privacy-and-legal-statements" target="_blank" rel="noopener noreferrer">Privacy and legal</a>
+        <a href="https://policy.psu.edu/policies/ad85" target="_blank" rel="noopener noreferrer">Non-discrimination</a>
+        <a href="https://accessibility.psu.edu/" target="_blank" rel="noopener noreferrer">Accessibility</a>
+        <a href="https://ist.psu.edu/contact" target="_blank" rel="noopener noreferrer">Contact IST</a>
+        <a class="footer-record" href="https://forms.cloud.microsoft/r/fG9NqPC4Zq" target="_blank" rel="noopener noreferrer">Request a PolyLinux training record <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <div class="container footer-bottom"><span>Copyright © 2026 The Pennsylvania State University.</span><span>Practice Linux. Build fluency. Return stronger.</span></div>
+  </footer>
 </body>
 </html>
+
