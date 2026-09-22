@@ -20,6 +20,8 @@ $labs = @(
 
 $textAssets = @(
     @{ Url = "$SourceBase/"; Path = "index.html" },
+    @{ Url = "$SourceBase/polylinux-home.css"; Path = "polylinux-home.css" },
+    @{ Url = "$SourceBase/polylinux-home.js"; Path = "polylinux-home.js" },
     @{ Url = "$SourceBase/polylinux.css"; Path = "polylinux.css" },
     @{ Url = "$SourceBase/lab-template.html"; Path = "lab-template.html" },
     @{ Url = "$SourceBase/libv86.js"; Path = "libv86.js" },
@@ -34,6 +36,8 @@ $textAssets = @(
 )
 
 $binaryAssets = @(
+    @{ Url = "$SourceBase/PSU_IST_CMYK_REV_2C.png"; Path = "PSU_IST_CMYK_REV_2C.png" },
+    @{ Url = "$SourceBase/PSU_DPCI_RGB_REV_3C.png"; Path = "PSU_DPCI_RGB_REV_3C.png" },
     @{ Url = "$SourceBase/lib/v86.wasm"; Path = "lib/v86.wasm" },
     @{ Url = "$SourceBase/bios/seabios.bin"; Path = "bios/seabios.bin" },
     @{ Url = "$SourceBase/bios/vgabios.bin"; Path = "bios/vgabios.bin" }
@@ -82,28 +86,19 @@ foreach ($asset in $binaryAssets) {
     Invoke-WebRequest -UseBasicParsing -Uri $asset.Url -OutFile $target
 }
 
-# Make the captured catalog self-contained inside this repository. The live page
-# currently reaches one directory upward for this shared stylesheet.
-$catalog = Join-Path $Destination "index.html"
-$catalogText = Get-Content -LiteralPath $catalog -Raw
-$catalogText = $catalogText.Replace('href="../common.css"', 'href="./common.css"')
-$catalogText = $catalogText.TrimEnd()
-Set-Content -LiteralPath $catalog -Value $catalogText -Encoding utf8NoBOM
-
 $timestamp = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 $manifest = @"
 # Live-site snapshot
 
 - Source: $SourceBase/
 - Captured (UTC): $timestamp
-- Included: catalog, shared HTML/CSS/JavaScript, v86/BIOS runtime dependencies, and every published lab launcher and Markdown instruction file.
+- Included: curriculum homepage, homepage CSS/JavaScript/PNG assets, shared lab HTML/CSS/JavaScript, v86/BIOS runtime dependencies, and every published lab launcher and Markdown instruction file.
 - Explicitly excluded: all `bzImage` kernels and `*.cpio.gz` initrds.
 - Not published as individual pages: catalog Labs 4, 9, 11, and 12.
 
-The catalog's `common.css` reference is localized from `../common.css` to
-`./common.css` so the repository contains all CSS required by the captured page.
-VM filenames remain in each launcher as deployment placeholders and must be
-uploaded manually under institutional policy.
+The homepage uses its live first-party paths. `common.css` remains in the
+repository for the shared lab pages. VM filenames remain in each launcher as
+deployment placeholders and must be uploaded manually under institutional policy.
 "@
 Set-Content -LiteralPath (Join-Path $Destination "LIVE-SNAPSHOT.md") -Value $manifest -Encoding utf8NoBOM
 
